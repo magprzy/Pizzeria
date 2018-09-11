@@ -1,0 +1,44 @@
+<app-order></app-order>
+<div class="order">
+
+    <h1>Adres dostawy</h1>
+    <form [formGroup]="angularForm" (ngSubmit)="onSubmit()">
+
+      <label>Imie
+        <input type="text" formControlName="firstName">
+      </label>
+
+      <label>Nazwisko
+        <input type="text" formControlName="lastName">
+      </label>
+
+      <label>Telefon
+        <input type="text" formControlName="phoneNumber">
+      </label>
+
+      <label>Email
+        <input type="text" formControlName="email">
+      </label>
+
+      <label>Ulica
+        <input type="text" formControlName="street">
+      </label>
+
+      <label>Miasto
+        <input type="text" formControlName="city">
+      </label>
+
+      <label>Lokal
+        <input type="text" formControlName="houseNumber">
+      </label>
+
+      <label>Pietro
+        <input type="text" formControlName="floor">
+      </label>
+
+      <button type="submit">Zamow</button>
+
+    </form>
+
+</div>
+

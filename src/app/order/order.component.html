@@ -1,0 +1,24 @@
+<div class="order">
+
+  <h3>
+    ZAMÓWIENIE
+  </h3>
+
+
+
+
+  <div *ngFor="let dish of dishes">
+    <h3>
+      <span> {{dish.name}}  </span>
+      <span>Cena: {{dish.price | currency:' '}} zł </span>
+      <button (click)="removeFromCart(dish.id)">USUN</button>
+    </h3>
+    <p>{{dish.description}}</p>
+  </div>
+
+  <a routerLink="/order-summary">Przejdź do podsumowania</a>
+</div>
+
+
+
+

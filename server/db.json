@@ -1,0 +1,100 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Pizza Margherita",
+      "isAvailable": true,
+      "description": "Sos, ser",
+      "type": "pizza",
+      "price": "22"
+    },
+    {
+      "id": 2,
+      "name": "Pizza Funghi",
+      "isAvailable": true,
+      "description": "Sos, ser, pieczarki",
+      "type": "pizza",
+      "price": "23.50"
+    },
+    {
+      "id": 3,
+      "name": "Kebeb w bułce",
+      "isAvailable": true,
+      "description": "Chrupiąca bułka z dodatkiem kebabu drobiowego, kapusty pekińskiej, pomidora, ogórka zielonego",
+      "type": "other",
+      "price": "13.90"
+    },
+    {
+      "id": 4,
+      "name": "Spagetti Bolognese",
+      "isAvailable": false,
+      "description": "Sos boloński",
+      "type": "spagetti",
+      "price": "14"
+    },
+    {
+      "id": 5,
+      "name": "Spagetti Siciliana",
+      "isAvailable": true,
+      "description": "Sos boloński z szynką i kukurydzą",
+      "type": "spagetti",
+      "price": "17.50"
+    },
+    {
+      "id": 6,
+      "name": "Coca-Cola",
+      "isAvailable": true,
+      "description": "Coca-cola z pelna zawartoscia cukru",
+      "type": "drink",
+      "price": "6"
+    },
+    {
+      "id": 7,
+      "name": "Zielona herbata",
+      "isAvailable": true,
+      "description": "Aromatyczna zielona herbata ",
+      "type": "drink",
+      "price": "10"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "dishIds": [
+        1,
+        5
+      ]
+    },
+
+
+    {
+      "addressData": {
+        "firstName": "John",
+        "lastName": "Snow",
+        "phoneNumber": "123456789",
+        "email": "johnsnow@got.com",
+        "street": "Sunny",
+        "city": "Winter",
+        "houseNumber": "12",
+        "floor": "23"
+      },
+      "dishesIDs": [
+        1,
+        2,
+        3,
+        7,
+        7,
+        6
+      ],
+      "id": 3
+    }
+  ],
+  
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "admin"
+    }
+  ]
+}
