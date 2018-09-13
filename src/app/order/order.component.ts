@@ -9,7 +9,7 @@ import {OrderService} from './order.service';
   styleUrls: ['./order.component.scss']
 })
 export class OrderComponent implements OnInit {
-  dishes: Dish[];
+  dishes: Dish[] = [];
 
 
   constructor(readonly orderService: OrderService) {

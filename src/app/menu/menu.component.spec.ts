@@ -1,9 +1,12 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MenuComponent } from './menu.component';
+import {MenuComponent} from './menu.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientModule} from '@angular/common/http';
+import {OrderListComponent} from '../order-list/order-list.component';
+import {Dish} from '../model/dish';
+import {OrderComponent} from '../order/order.component';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -16,9 +19,9 @@ describe('MenuComponent', () => {
         RouterTestingModule,
         HttpClientModule,
       ],
-      declarations: [ MenuComponent ]
+      declarations: [MenuComponent, OrderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,4 +33,16 @@ describe('MenuComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should add dish to cart', () => {
+    const order = TestBed.createComponent(OrderComponent).componentInstance;
+
+    const dish: Dish = {id: 1, name: 'pizza', description: 'dobra', type: 'pizza', price: 25, isAvailable: true};
+    component.addToCart(dish);
+    order.ngOnInit();
+    expect(order.dishes.length).toBe(1);
+
+  });
+
+  
 });
