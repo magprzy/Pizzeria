@@ -10,16 +10,19 @@
 
 
   <div *ngFor="let dish of dishes">
-    <div *ngIf="dish.isAvailable">
+
       <h3>
+        <span> {{dish.id}}</span>
         <span> {{dish.name}}  </span>
         <span>Cena: {{dish.price | currency:' '}} zł </span>
-        <button (click)="addToCart(dish)" > Zamów</button>
 
+
+        <input type="checkbox" [checked]="dish.isAvailable" (change)="changeAvailability(dish)"/>
+        <span *ngIf="dish.isAvailable">dostępne</span><span *ngIf="!dish.isAvailable">niedostępne</span>
 
       </h3>
       <p>{{dish.description}}</p>
-    </div>
+
   </div>
 </div>
 

@@ -7,7 +7,7 @@
 
     <div class="header-right">
       <a routerLink="order-list" *ngIf="loginService.checkIsLogged()">Lista zamowien</a>
-      <a routerLink="order-list" *ngIf="loginService.checkIsLogged()">Lista dan</a>
+      <a routerLink="dish-list" *ngIf="loginService.checkIsLogged()">Lista dan</a>
       <a routerLink="login" *ngIf="!loginService.checkIsLogged()">Logowanie</a>
       <a (click)="loginService.logout()" *ngIf="loginService.checkIsLogged()"> Wyloguj </a>
 

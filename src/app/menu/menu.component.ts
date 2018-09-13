@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Dish} from '../model/dish';
 import {MenuService} from './/menu.service';
 import {OrderService} from '../order/order.service';
+import {LoginService} from '../login/login.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,9 +11,9 @@ import {OrderService} from '../order/order.service';
 })
 export class MenuComponent implements OnInit {
   dishes: Dish[];
-  isAvailable: true;
 
-  constructor(readonly dishService: MenuService, readonly orderService: OrderService) {
+
+  constructor(readonly dishService: MenuService, readonly orderService: OrderService, readonly loginService: LoginService) {
   }
 
   ngOnInit() {
@@ -27,9 +28,7 @@ export class MenuComponent implements OnInit {
     this.orderService.addDishToCart(dish);
   }
 
-  /*changeAvailability(dish) {
-  this.orderService.changeAvailability(dish);
-  }*/
+
 
 
 }

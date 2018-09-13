@@ -1,0 +1,22 @@
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.menu {
+  float:left;
+  width: 40%;
+  margin:  60px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-style: groove;
+}
+
+

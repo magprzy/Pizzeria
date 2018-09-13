@@ -10,7 +10,6 @@ import {map} from 'rxjs/operators';
 export class MenuService {
 
 
-
   constructor(readonly http: HttpClient) {
   }
 
@@ -26,9 +25,12 @@ export class MenuService {
     );
   }
 
-  /*changeAvailability(dish: Dish){
-    dish.isAvailable =
-  }*/
+  changeAvailability(dish: Dish) {
+    if (dish.isAvailable === true) {
+      dish.isAvailable = false;
+    } else {dish.isAvailable = true;}
+
+  }
 
 
 }

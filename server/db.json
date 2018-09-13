@@ -3,11 +3,10 @@
     {
       "id": 1,
       "name": "Pizza Margherita",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser",
       "type": "pizza",
-      "price": "22",
-      "isAvailable": false
+      "price": "22"
     },
     {
       "id": 2,
@@ -15,8 +14,7 @@
       "isAvailable": true,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
-      "price": "23.50",
-      "isAvailable": true
+      "price": "23.50"
     },
     {
       "id": 3,
@@ -24,17 +22,15 @@
       "isAvailable": true,
       "description": "Chrupiąca bułka z dodatkiem kebabu drobiowego, kapusty pekińskiej, pomidora, ogórka zielonego",
       "type": "other",
-      "price": "13.90",
-      "isAvailable": true
+      "price": "13.90"
     },
     {
       "id": 4,
       "name": "Spagetti Bolognese",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński",
       "type": "spagetti",
-      "price": "14",
-      "isAvailable": true
+      "price": "14"
     },
     {
       "id": 5,
@@ -42,8 +38,7 @@
       "isAvailable": true,
       "description": "Sos boloński z szynką i kukurydzą",
       "type": "spagetti",
-      "price": "17.50",
-      "isAvailable": true
+      "price": "17.50"
     },
     {
       "id": 6,
@@ -51,17 +46,15 @@
       "isAvailable": true,
       "description": "Coca-cola z pelna zawartoscia cukru",
       "type": "drink",
-      "price": "6",
-      "isAvailable": true
+      "price": "6"
     },
     {
       "id": 7,
       "name": "Zielona herbata",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Aromatyczna zielona herbata ",
       "type": "drink",
-      "price": "10",
-      "isAvailable": false
+      "price": "10"
     }
   ],
   "orders": [
@@ -102,6 +95,41 @@
         6
       ],
       "id": 3
+    },
+    {
+      "addressData": {
+        "firstName": null,
+        "lastName": null,
+        "phoneNumber": null,
+        "email": null,
+        "street": null,
+        "city": null,
+        "houseNumber": null,
+        "floor": null
+      },
+      "dishesIDs": [
+        2,
+        3
+      ],
+      "id": 4
+    },
+    {
+      "addressData": {
+        "firstName": null,
+        "lastName": null,
+        "phoneNumber": null,
+        "email": null,
+        "street": null,
+        "city": null,
+        "houseNumber": null,
+        "floor": null
+      },
+      "dishesIDs": [
+        2,
+        3,
+        4
+      ],
+      "id": 5
     }
   ],
   "users": [

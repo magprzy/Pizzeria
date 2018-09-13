@@ -13,6 +13,7 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 import {LoginGuard} from './login-guard';
+import { DishListComponent } from './dish-list/dish-list.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {LoginGuard} from './login-guard';
     OrderSummaryComponent,
     OrderListComponent,
     OrderConfirmationComponent,
+    DishListComponent,
 
   ],
   imports: [
