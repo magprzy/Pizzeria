@@ -1,0 +1,26 @@
+.popup-container{
+  background-color: rgba(50, 50, 50, .7);
+  width: 100%;
+  height:  100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .popup-container__contant{
+    position: relative;
+    margin: 0 auto;
+    height: 40%;
+    width: 40%;
+    top: calc(100% - 75vh);
+    background-color: white;
+    .popup-container__contant__title{
+      h2{
+        padding: 0 5px;
+        background-color: gray;
+        margin: 0px;
+      }
+    }
+    .popup-container__contant__content{
+      padding: 5px;
+    }
+  }
+}

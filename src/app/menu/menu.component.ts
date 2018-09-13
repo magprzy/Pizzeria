@@ -1,17 +1,18 @@
 import {Component, OnInit} from '@angular/core';
 import {Dish} from '../model/dish';
-import {DishesListService} from '../dishes-list/dishes-list.service';
+import {MenuService} from './/menu.service';
 import {OrderService} from '../order/order.service';
 
 @Component({
-  selector: 'app-dishes-list',
-  templateUrl: './dishes-list.component.html',
-  styleUrls: ['./dishes-list.component.scss']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
 })
-export class DishesListComponent implements OnInit {
+export class MenuComponent implements OnInit {
   dishes: Dish[];
+  isAvailable: true;
 
-  constructor(readonly dishService: DishesListService, readonly orderService: OrderService) {
+  constructor(readonly dishService: MenuService, readonly orderService: OrderService) {
   }
 
   ngOnInit() {
@@ -25,6 +26,10 @@ export class DishesListComponent implements OnInit {
   addToCart(dish) {
     this.orderService.addDishToCart(dish);
   }
+
+  /*changeAvailability(dish) {
+  this.orderService.changeAvailability(dish);
+  }*/
 
 
 }

@@ -1,0 +1,15 @@
+<div class="order">
+
+
+
+  <div *ngFor="let order of orders">
+    <h3>
+      <span> {{order.id}}  </span>
+      <span> Zamowione dania: {{order.dishesIDs }}  </span>
+      <span> Adres: {{order.addressData.city}}  </span>
+
+    </h3>
+
+  </div>
+
+</div>

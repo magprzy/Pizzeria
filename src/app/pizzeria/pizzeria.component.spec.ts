@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PizzeriaComponent } from './pizzeria.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClientModule} from '@angular/common/http';
+import {OrderComponent} from '../order/order.component';
+import {MenuComponent} from '../menu/menu.component';
 
 describe('PizzeriaComponent', () => {
   let component: PizzeriaComponent;
@@ -8,7 +13,12 @@ describe('PizzeriaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PizzeriaComponent ]
+      imports: [
+        ReactiveFormsModule,
+        RouterTestingModule,
+        HttpClientModule,
+      ],
+      declarations: [ PizzeriaComponent, OrderComponent, MenuComponent ]
     })
     .compileComponents();
   }));

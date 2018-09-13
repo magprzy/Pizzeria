@@ -7,7 +7,7 @@ import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class DishesListService {
+export class MenuService {
 
 
 
@@ -25,6 +25,10 @@ export class DishesListService {
       })
     );
   }
+
+  /*changeAvailability(dish: Dish){
+    dish.isAvailable =
+  }*/
 
 
 }

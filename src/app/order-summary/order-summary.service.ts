@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Dish} from '../model/dish';
 import {Order} from '../model/order';
 
 
@@ -9,6 +8,7 @@ import {Order} from '../model/order';
   providedIn: 'root'
 })
 export class OrderSummaryService {
+
 
   constructor(private http: HttpClient) {
   }
@@ -18,5 +18,6 @@ export class OrderSummaryService {
 
     return this.http.post<Order>('http://localhost:3000/orders', order);
   }
+
 
 }

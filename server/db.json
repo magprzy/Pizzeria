@@ -6,7 +6,8 @@
       "isAvailable": true,
       "description": "Sos, ser",
       "type": "pizza",
-      "price": "22"
+      "price": "22",
+      "isAvailable": false
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "isAvailable": true,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
-      "price": "23.50"
+      "price": "23.50",
+      "isAvailable": true
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "isAvailable": true,
       "description": "Chrupiąca bułka z dodatkiem kebabu drobiowego, kapusty pekińskiej, pomidora, ogórka zielonego",
       "type": "other",
-      "price": "13.90"
+      "price": "13.90",
+      "isAvailable": true
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "isAvailable": false,
       "description": "Sos boloński",
       "type": "spagetti",
-      "price": "14"
+      "price": "14",
+      "isAvailable": true
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "isAvailable": true,
       "description": "Sos boloński z szynką i kukurydzą",
       "type": "spagetti",
-      "price": "17.50"
+      "price": "17.50",
+      "isAvailable": true
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "isAvailable": true,
       "description": "Coca-cola z pelna zawartoscia cukru",
       "type": "drink",
-      "price": "6"
+      "price": "6",
+      "isAvailable": true
     },
     {
       "id": 7,
@@ -54,19 +60,11 @@
       "isAvailable": true,
       "description": "Aromatyczna zielona herbata ",
       "type": "drink",
-      "price": "10"
+      "price": "10",
+      "isAvailable": false
     }
   ],
   "orders": [
-    {
-      "id": 1,
-      "dishIds": [
-        1,
-        5
-      ]
-    },
-
-
     {
       "addressData": {
         "firstName": "John",
@@ -74,7 +72,24 @@
         "phoneNumber": "123456789",
         "email": "johnsnow@got.com",
         "street": "Sunny",
-        "city": "Winter",
+        "city": "Baranowo",
+        "houseNumber": "12",
+        "floor": "23"
+      },
+      "id": 1,
+      "dishesIDs": [
+        1,
+        5
+      ]
+    },
+    {
+      "addressData": {
+        "firstName": "John",
+        "lastName": "Snow",
+        "phoneNumber": "123456789",
+        "email": "johnsnow@got.com",
+        "street": "Sunny",
+        "city": "Poznan",
         "houseNumber": "12",
         "floor": "23"
       },
@@ -89,7 +104,6 @@
       "id": 3
     }
   ],
-  
   "users": [
     {
       "id": 1,

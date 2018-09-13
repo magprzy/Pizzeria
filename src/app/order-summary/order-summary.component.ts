@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {OrderSummaryService} from './order-summary.service';
 import {Order} from '../model/order';
 import {OrderService} from '../order/order.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class OrderSummaryComponent implements OnInit {
 
   });
 
-  constructor(readonly orderSummaryService: OrderSummaryService, readonly orderService: OrderService) {
+  constructor(readonly orderSummaryService: OrderSummaryService, readonly orderService: OrderService, private router: Router) {
 
   }
 
@@ -34,15 +35,18 @@ export class OrderSummaryComponent implements OnInit {
   }
 
   createOrder() {
-   this.orderSummary.addressData = this.angularForm.value;
-   this.orderSummary.dishesIDs = this.orderService.getDishesIds();
+    this.orderSummary.addressData = this.angularForm.value;
+    this.orderSummary.dishesIDs = this.orderService.getDishesIds();
   }
 
   onSubmit() {
     this.createOrder();
     this.orderSummaryService.saveOrder(this.orderSummary).subscribe();
-    console.log(this.orderService.getDishesIds());
 
   }
 
-}
+  openConfirmation() {
+    this.router.navigate([{outlets: {popup: ['notification']}}]);
+
+  }}
+

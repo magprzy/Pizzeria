@@ -6,13 +6,16 @@
 
 
     <div class="header-right">
-      <a routerLink="menu">Menu</a>
-      <a routerLink="login">Logowanie</a>
-      <a routerLink="order">Zamówienie</a>
+      <a routerLink="order-list" *ngIf="loginService.checkIsLogged()">Lista zamowien</a>
+      <a routerLink="order-list" *ngIf="loginService.checkIsLogged()">Lista dan</a>
+      <a routerLink="login" *ngIf="!loginService.checkIsLogged()">Logowanie</a>
+      <a (click)="loginService.logout()" *ngIf="loginService.checkIsLogged()"> Wyloguj </a>
+
     </div>
   </div>
 
 
   <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
 
 

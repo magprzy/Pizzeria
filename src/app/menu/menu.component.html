@@ -14,6 +14,9 @@
       <span> {{dish.name}}  </span>
       <span>Cena: {{dish.price | currency:' '}} zł </span>
       <button (click)="addToCart(dish)"> Zamów</button>
+      <input type="checkbox"  (change)="changeAvailability(dish)"/>
+       <span *ngIf="dish.isAvailable">dostępne</span><span *ngIf="!dish.isAvailable">niedostępne</span>
+
     </h3>
     <p>{{dish.description}}</p>
   </div>

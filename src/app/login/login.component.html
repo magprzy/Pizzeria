@@ -1,6 +1,6 @@
-<div class="login"><p>
+<div class="login">
  <h1>Logowanie</h1>
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <label>Imie
       <input type="text" formControlName="name">
     </label>

@@ -4,21 +4,28 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PizzeriaComponent } from './pizzeria/pizzeria.component';
-import { DishesListComponent } from './dishes-list/dishes-list.component';
+import { MenuComponent } from './menu/menu.component';
 import { OrderComponent } from './order/order.component';
 import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { OrderListComponent } from './order-list/order-list.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import {LoginGuard} from './login-guard';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzeriaComponent,
-    DishesListComponent,
+    MenuComponent,
     OrderComponent,
     LoginComponent,
     OrderSummaryComponent,
+    OrderListComponent,
+    OrderConfirmationComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,7 @@ import { ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
