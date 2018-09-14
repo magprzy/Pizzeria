@@ -1,9 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DishListComponent } from './dish-list.component';
+import {DishListComponent} from './dish-list.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientModule} from '@angular/common/http';
+import {Dish} from '../model/dish';
 
 describe('DishListComponent', () => {
   let component: DishListComponent;
@@ -16,9 +17,9 @@ describe('DishListComponent', () => {
         RouterTestingModule,
         HttpClientModule,
       ],
-      declarations: [ DishListComponent ]
+      declarations: [DishListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,4 +31,12 @@ describe('DishListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should change dish availability', function () {
+    const dish = <Dish>{isAvailable: true};
+    component.dishes = [dish];
+    component.changeAvailability(dish);
+    expect(component.dishes).toEqual([<Dish>{isAvailable: false}]);
+  });
+  
 });

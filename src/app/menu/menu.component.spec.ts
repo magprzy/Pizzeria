@@ -43,15 +43,4 @@ describe('MenuComponent', () => {
     expect(order.dishes.length).toBe(1);
   });
 
-
-  it('should get all dishes when init', () => {
-    const dishService = TestBed.get(MenuService);
-
-    spyOn(dishService, 'getAllDishes');
-    // spyOn ( component, 'ngOnInit');
-
-    // component.ngOnInit();
-
-    expect(component.ngOnInit).toHaveBeenCalled();
-  });
 });
