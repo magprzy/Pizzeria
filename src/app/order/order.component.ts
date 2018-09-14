@@ -21,7 +21,7 @@ export class OrderComponent implements OnInit {
 
   }
   removeFromCart(id) {
-     this.orderService.removeDish(id);
+     this.orderService.removeDishFromOrder(id);
      this.dishes = this.orderService.getOrder();
   }
 

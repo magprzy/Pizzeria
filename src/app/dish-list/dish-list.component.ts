@@ -16,7 +16,7 @@ export class DishListComponent implements OnInit {
     this.menuService.getAllDishes().subscribe(res => this.dishes = res);
   }
 
-  ngSelect(type) {
+  select(type) {
     this.menuService.getSelectedDishes(type).subscribe(res => this.dishes = res);
   }
 

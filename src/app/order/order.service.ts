@@ -10,7 +10,6 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class OrderService {
-
   dishes: Dish[] = [];
   dishesIDs: number[] = [];
 
@@ -22,7 +21,7 @@ export class OrderService {
     return this.dishes;
   }
 
-  addDishToCart(item: Dish): void {
+  addDishToCart(item): void {
     this.dishes.push(item);
   }
 
@@ -30,7 +29,7 @@ export class OrderService {
     this.dishes = [];
   }
 
-  removeDish(id: number) {
+  removeDishFromOrder(id: number) {
     this.dishes.splice(this.dishes.indexOf(this.dishes.find((dish => dish.id === id))), 1);
   }
 
