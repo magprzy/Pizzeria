@@ -7,6 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {OrderListComponent} from '../order-list/order-list.component';
 import {Dish} from '../model/dish';
 import {OrderComponent} from '../order/order.component';
+import {MenuService} from './menu.service';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -36,13 +37,21 @@ describe('MenuComponent', () => {
 
   it('should add dish to cart', () => {
     const order = TestBed.createComponent(OrderComponent).componentInstance;
-
     const dish: Dish = {id: 1, name: 'pizza', description: 'dobra', type: 'pizza', price: 25, isAvailable: true};
     component.addToCart(dish);
     order.ngOnInit();
     expect(order.dishes.length).toBe(1);
-
   });
 
-  
+
+  it('should get all dishes when init', () => {
+    const dishService = TestBed.get(MenuService);
+
+    spyOn(dishService, 'getAllDishes');
+    // spyOn ( component, 'ngOnInit');
+
+    // component.ngOnInit();
+
+    expect(component.ngOnInit).toHaveBeenCalled();
+  });
 });

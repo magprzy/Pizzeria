@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
     this.dishService.getAllDishes().subscribe(res => this.dishes = res);
   }
 
-  ngSelect(type) {
+  select(type) {
     this.dishService.getSelectedDishes(type).subscribe(res => this.dishes = res);
   }
 

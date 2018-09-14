@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OrderSummaryComponent } from './order-summary.component';
+import {OrderSummaryComponent} from './order-summary.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientModule} from '@angular/common/http';
@@ -17,9 +17,9 @@ describe('OrderSummaryComponent', () => {
         RouterTestingModule,
         HttpClientModule,
       ],
-      declarations: [ OrderSummaryComponent, OrderComponent ]
+      declarations: [OrderSummaryComponent, OrderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -31,4 +31,8 @@ describe('OrderSummaryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+ /* it('should create order', function () {
+
+  });*/
 });

@@ -9,17 +9,22 @@ import {MenuService} from '../menu/menu.service';
 })
 export class DishListComponent implements OnInit {
   dishes: Dish[];
-  constructor(private readonly dishService: MenuService) { }
+
+  constructor(private readonly menuService: MenuService) { }
 
   ngOnInit() {
-    this.dishService.getAllDishes().subscribe(res => this.dishes = res);
+    this.menuService.getAllDishes().subscribe(res => this.dishes = res);
   }
 
   ngSelect(type) {
-    this.dishService.getSelectedDishes(type).subscribe(res => this.dishes = res);
+    this.menuService.getSelectedDishes(type).subscribe(res => this.dishes = res);
   }
 
   changeAvailability(dish) {
-    this.dishService.changeAvailability(dish);
+    const newDish = dish;
+    if (dish.isAvailable === true) {
+      newDish.isAvailable = false;
+    } else {newDish.isAvailable = true; }
+    this.menuService.changeAvailability(newDish);
   }
 }

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Pizza Margherita",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos, ser",
       "type": "pizza",
       "price": "22"
@@ -51,7 +51,7 @@
     {
       "id": 7,
       "name": "Zielona herbata",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Aromatyczna zielona herbata ",
       "type": "drink",
       "price": "10"
@@ -130,6 +130,23 @@
         4
       ],
       "id": 5
+    },
+    {
+      "addressData": {
+        "firstName": null,
+        "lastName": null,
+        "phoneNumber": null,
+        "email": null,
+        "street": null,
+        "city": null,
+        "houseNumber": null,
+        "floor": null
+      },
+      "dishesIDs": [
+        6,
+        6
+      ],
+      "id": 6
     }
   ],
   "users": [

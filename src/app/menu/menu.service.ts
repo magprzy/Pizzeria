@@ -26,10 +26,7 @@ export class MenuService {
   }
 
   changeAvailability(dish: Dish) {
-    if (dish.isAvailable === true) {
-      dish.isAvailable = false;
-    } else {dish.isAvailable = true;}
-
+     this.http.put<Dish[]>('http://localhost:3000/dishes/' + dish.id, dish).subscribe();
   }
 
 

@@ -26,12 +26,12 @@ export class OrderService {
     this.dishes.push(item);
   }
 
-  cleanOrder(item: Dish){
+  cleanOrder() {
     this.dishes = [];
   }
 
   removeDish(id: number) {
-    this.dishes = this.dishes.filter((dish => dish.id !== id));
+    this.dishes.splice(this.dishes.indexOf(this.dishes.find((dish => dish.id === id))), 1);
   }
 
   getDishesIds() {
