@@ -25,13 +25,5 @@ export class OrderListComponent implements OnInit, OnDestroy {
     this.orderSub.unsubscribe();
   }
 
-  changeStatus(order) {
-    const newOrder = order;
-    if (order.status === 'w realizacji') {
-      newOrder.status = 'zrealizowano';
-    } else  {
-      newOrder.status = 'w realizacji';
-    }
-    this.orderService.changeOrderStatus(newOrder);
-  }
+
 }

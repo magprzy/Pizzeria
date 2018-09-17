@@ -1,0 +1,20 @@
+<div class="board">
+  <div *ngIf="dish">
+    <h3>
+
+      <a> ID dania: {{dish.id}} </a><br/>
+      <a>Nazwa dania: {{dish.name}}</a><br/>
+      <a>Opis: {{dish.description}}</a><br/>
+      <a>Typ dania: {{dish.type}}</a><br/>
+      <a>Cena: {{dish.price}}</a><br/>
+      <a>Status: <span *ngIf="dish.isAvailable">dostępne</span><span
+        *ngIf="!dish.isAvailable">niedostępne</span></a><br/>
+      <a routerLink="/dish-list"> Wróć </a>
+
+    </h3>
+
+
+  </div>
+
+
+</div>

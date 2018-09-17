@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Dish} from '../model/dish';
 
 import {OrderService} from './order.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-order',
@@ -10,9 +11,11 @@ import {OrderService} from './order.service';
 })
 export class OrderComponent implements OnInit {
   dishes: Dish[] = [];
+  totalCost: number;
 
 
   constructor(readonly orderService: OrderService) {
+    this.totalCost = this.orderService.getTotalCost();
   }
 
 
@@ -20,9 +23,11 @@ export class OrderComponent implements OnInit {
     this.dishes = this.orderService.getOrder();
 
   }
+
   removeFromCart(id) {
-     this.orderService.removeDishFromOrder(id);
-     this.dishes = this.orderService.getOrder();
+    this.orderService.removeDishFromOrder(id);
+    this.dishes = this.orderService.getOrder();
   }
+
 
 }

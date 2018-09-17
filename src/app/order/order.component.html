@@ -5,16 +5,16 @@
   </h3>
 
 
-
-
   <div *ngFor="let dish of dishes">
     <h3>
       <span> {{dish.name}}  </span>
       <span>Cena: {{dish.price | currency:' '}} zł </span>
-      <button (click)="removeFromCart(dish.id)">USUN</button>
+      <button (click)="removeFromCart(dish.id)">USUŃ</button>
     </h3>
     <p>{{dish.description}}</p>
   </div>
+
+  <div>Razem: <span>{{orderService.getTotalCost() | currency:' '}} zł </span></div>
 
   <a routerLink="/order-summary">Przejdź do podsumowania</a>
 </div>

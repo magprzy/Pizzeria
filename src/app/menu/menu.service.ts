@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Dish} from '../model/dish';
 import {map} from 'rxjs/operators';
+import {Order} from '../model/order';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +27,15 @@ export class MenuService {
   }
 
   changeAvailability(dish: Dish) {
-     this.http.put<Dish[]>('http://localhost:3000/dishes/' + dish.id, dish).subscribe();
+    this.http.put<Dish[]>('http://localhost:3000/dishes/' + dish.id, dish).subscribe();
   }
 
+  findDishById(id: number): Observable<Dish> {
+   return this.http.get<Dish>('http://localhost:3000/dishes/' + id);
+  }
 
+  getDishByID(id): Observable<Dish> {
+    return this.http.get<Dish>('http://localhost:3000/dishes/' + id);
+
+  }
 }

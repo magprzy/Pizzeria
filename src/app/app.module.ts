@@ -15,6 +15,7 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
 import {LoginGuard} from './login-guard';
 import { DishListComponent } from './dish-list/dish-list.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { DishDetailsComponent } from './dish-details/dish-details.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     OrderConfirmationComponent,
     DishListComponent,
     OrderDetailsComponent,
+    DishDetailsComponent,
 
   ],
   imports: [

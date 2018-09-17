@@ -1,7 +1,7 @@
 <div class="order">
 
 
-  <h2 *ngIf="orders.length === 0"> Brak aktualnych zamowień </h2>
+  <!--- <h2 *ngIf="orders.length === 0"> Brak aktualnych zamowień </h2> -->
   <div *ngFor="let order of orders">
     <h3>
       <span> {{order.id}}  </span>
@@ -9,7 +9,7 @@
       <span> Adres: {{order.addressData.city}}  </span>
       <span> Status: {{order.status}}</span>
     </h3>
-    <button (click)="changeStatus(order)" > Zmień status</button>
+
     <a routerLink="/order-details/{{order.id}}" > Więcej informacji </a>
   </div>
 

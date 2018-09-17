@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Dish} from '../model/dish';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Order} from '../model/order';
 import {HttpClient} from '@angular/common/http';
@@ -12,6 +12,7 @@ import {HttpClient} from '@angular/common/http';
 export class OrderService {
   dishes: Dish[] = [];
   dishesIDs: number[] = [];
+  totalCost: number;
 
   constructor(readonly http: HttpClient) {
   }
@@ -26,12 +27,25 @@ export class OrderService {
 
   }
 
+  getTotalCost() {
+    return this.totalCost;
+  }
+
   addDishToCart(item): void {
     this.dishes.push(item);
+    this.calculateOrderCost();
   }
 
   cleanOrder() {
     this.dishes = [];
+  }
+
+  calculateOrderCost() {
+    this.totalCost = 0;
+    this.dishes.forEach(dish => {
+      this.totalCost += +dish.price;
+    });
+
   }
 
   removeDishFromOrder(id: number) {

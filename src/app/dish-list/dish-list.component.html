@@ -20,6 +20,8 @@
         <input type="checkbox" [checked]="dish.isAvailable" (change)="changeAvailability(dish)"/>
         <span *ngIf="dish.isAvailable">dostępne</span><span *ngIf="!dish.isAvailable">niedostępne</span>
 
+        <a routerLink="/dish-details/{{dish.id}}" > Więcej informacji </a>
+
       </h3>
       <p>{{dish.description}}</p>
 
