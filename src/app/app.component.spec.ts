@@ -28,6 +28,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('span').textContent).toContain('Herzlich willkommen');
+    expect(compiled.querySelector('span').textContent).toContain('Pizzeria');
   }));
 });

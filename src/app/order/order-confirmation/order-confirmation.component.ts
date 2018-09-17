@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {OrderService} from '../order/order.service';
+import {OrderService} from '../order.service';
 
 @Component({
   selector: 'app-order-confirmation',

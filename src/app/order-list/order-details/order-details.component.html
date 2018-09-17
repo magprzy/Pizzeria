@@ -22,6 +22,8 @@
     <a> Cena zamówienia {{ orderService.getTotalCost()| currency:' '}} zł </a>
 
     <button (click)="changeStatus(order)"> Zmień status</button>
+    <a routerLink="/order-list"> Wróć </a>
+    <button (click)="removeOrder(order.id)">USUŃ</button>
   </div>
 
 

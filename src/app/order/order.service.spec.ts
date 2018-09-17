@@ -23,7 +23,7 @@ describe('OrderService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('should remove dish', inject([OrderService], (service: OrderService) => {
+  it('should remove dish from order', inject([OrderService], (service: OrderService) => {
     service.dishes = [<Dish>{id: 1}, <Dish>{id: 2}];
     service.removeDishFromOrder(1);
     expect(service.dishes.length).toBe(1);
@@ -35,4 +35,11 @@ describe('OrderService', () => {
     expect(service.getDishesIds()).toEqual([4, 2, 3]);
 
   }));
+
+  it('should calculate order cost', inject([OrderService], (service: OrderService) => {
+    service.dishes = [<Dish>{price: 14}, <Dish>{price: 12}, <Dish>{price: 13}];
+    service.calculateOrderCost();
+    expect(service.totalCost).toBe(39);
+  }));
+
 });

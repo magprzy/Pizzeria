@@ -8,14 +8,14 @@ import { MenuComponent } from './menu/menu.component';
 import { OrderComponent } from './order/order.component';
 import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { OrderSummaryComponent } from './order-summary/order-summary.component';
+import { OrderSummaryComponent } from './order/order-summary/order-summary.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { OrderListComponent } from './order-list/order-list.component';
-import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { OrderConfirmationComponent } from './order/order-confirmation/order-confirmation.component';
 import {LoginGuard} from './login-guard';
 import { DishListComponent } from './dish-list/dish-list.component';
-import { OrderDetailsComponent } from './order-details/order-details.component';
-import { DishDetailsComponent } from './dish-details/dish-details.component';
+import { OrderDetailsComponent } from './order-list/order-details/order-details.component';
+import { DishDetailsComponent } from './dish-list/dish-details/dish-details.component';
 
 
 @NgModule({

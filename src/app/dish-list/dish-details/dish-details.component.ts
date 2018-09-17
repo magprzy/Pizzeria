@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
-import {Dish} from '../model/dish';
+import {Dish} from '../../model/dish';
 import {ActivatedRoute} from '@angular/router';
-import {MenuService} from '../menu/menu.service';
+import {MenuService} from '../../menu/menu.service';
 
 @Component({
   selector: 'app-dish-details',

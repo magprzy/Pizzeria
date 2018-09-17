@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Dish} from '../model/dish';
-
 import {OrderService} from './order.service';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-order',

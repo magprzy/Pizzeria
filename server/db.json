@@ -60,21 +60,22 @@
   "orders": [
     {
       "addressData": {
-        "firstName": "Jan",
-        "lastName": "Kowalski",
-        "phoneNumber": "987654321",
-        "email": "jan@kowalski.org",
-        "street": "Kwiatowa",
-        "city": "Poznan",
-        "houseNumber": 854,
-        "floor": 10
+        "firstName": null,
+        "lastName": null,
+        "phoneNumber": null,
+        "email": null,
+        "street": null,
+        "city": null,
+        "houseNumber": null,
+        "floor": null
       },
       "dishesIDs": [
-        1,
+        2,
+        2,
         2
       ],
       "status": "w realizacji",
-      "id": 1
+      "id": 5
     },
     {
       "addressData": {
@@ -88,30 +89,15 @@
         "floor": null
       },
       "dishesIDs": [
-        3,
+        1,
+        1,
+        1,
+        1,
         3,
         4
       ],
       "status": "w realizacji",
-      "id": 2
-    },
-    {
-      "addressData": {
-        "firstName": null,
-        "lastName": null,
-        "phoneNumber": null,
-        "email": null,
-        "street": null,
-        "city": null,
-        "houseNumber": null,
-        "floor": null
-      },
-      "dishesIDs": [
-        1,
-        1
-      ],
-      "status": "w realizacji",
-      "id": 3
+      "id": 6
     }
   ],
   "users": [

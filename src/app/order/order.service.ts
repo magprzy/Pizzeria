@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Dish} from '../model/dish';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
+import {Observable} from 'rxjs';
+
 import {Order} from '../model/order';
 import {HttpClient} from '@angular/common/http';
 
@@ -22,8 +22,8 @@ export class OrderService {
     return this.dishes;
   }
 
-  getOrderByID(id): Observable<Order[]> {
-    return this.http.get<Order[]>('http://localhost:3000/orders/' + id);
+  getOrderByID(id): Observable<Order> {
+    return this.http.get<Order>('http://localhost:3000/orders/' + id);
 
   }
 
@@ -45,7 +45,6 @@ export class OrderService {
     this.dishes.forEach(dish => {
       this.totalCost += +dish.price;
     });
-
   }
 
   removeDishFromOrder(id: number) {
@@ -67,5 +66,8 @@ export class OrderService {
     this.http.put<Order[]>('http://localhost:3000/orders/' + order.id, order).subscribe();
   }
 
+  removeOrder(id) {
+    this.http.delete('http://localhost:3000/orders/' + id).subscribe();
+  }
 }
 

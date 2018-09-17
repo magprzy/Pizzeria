@@ -4,7 +4,7 @@ import {OrderSummaryComponent} from './order-summary.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientModule} from '@angular/common/http';
-import {OrderComponent} from '../order/order.component';
+import {OrderComponent} from '../order.component';
 
 describe('OrderSummaryComponent', () => {
   let component: OrderSummaryComponent;
