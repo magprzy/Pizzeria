@@ -60,76 +60,40 @@
   "orders": [
     {
       "addressData": {
-        "firstName": "John",
-        "lastName": "Snow",
-        "phoneNumber": "123456789",
-        "email": "johnsnow@got.com",
-        "street": "Sunny",
-        "city": "Baranowo",
-        "houseNumber": "12",
-        "floor": "23"
-      },
-      "id": 1,
-      "dishesIDs": [
-        1,
-        5
-      ]
-    },
-    {
-      "addressData": {
-        "firstName": "John",
-        "lastName": "Snow",
-        "phoneNumber": "123456789",
-        "email": "johnsnow@got.com",
-        "street": "Sunny",
+        "firstName": "Jan",
+        "lastName": "Kowalski",
+        "phoneNumber": "987654321",
+        "email": "jan@kowalski.org",
+        "street": "Kwiatowa",
         "city": "Poznan",
-        "houseNumber": "12",
-        "floor": "23"
+        "houseNumber": 854,
+        "floor": 10
       },
       "dishesIDs": [
         1,
-        2,
+        2
+      ],
+      "status": "w realizacji",
+      "id": 1
+    },
+    {
+      "addressData": {
+        "firstName": null,
+        "lastName": null,
+        "phoneNumber": null,
+        "email": null,
+        "street": null,
+        "city": null,
+        "houseNumber": null,
+        "floor": null
+      },
+      "dishesIDs": [
         3,
-        7,
-        7,
-        6
-      ],
-      "id": 3
-    },
-    {
-      "addressData": {
-        "firstName": null,
-        "lastName": null,
-        "phoneNumber": null,
-        "email": null,
-        "street": null,
-        "city": null,
-        "houseNumber": null,
-        "floor": null
-      },
-      "dishesIDs": [
-        2,
-        3
-      ],
-      "id": 4
-    },
-    {
-      "addressData": {
-        "firstName": null,
-        "lastName": null,
-        "phoneNumber": null,
-        "email": null,
-        "street": null,
-        "city": null,
-        "houseNumber": null,
-        "floor": null
-      },
-      "dishesIDs": [
-        2,
         3,
         4
       ],
-      "id": 5
+      "status": "zrealizowano",
+      "id": 2
     },
     {
       "addressData": {
@@ -143,10 +107,11 @@
         "floor": null
       },
       "dishesIDs": [
-        6,
-        6
+        1,
+        1
       ],
-      "id": 6
+      "status": "w realizacji",
+      "id": 3
     }
   ],
   "users": [

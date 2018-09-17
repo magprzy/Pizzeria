@@ -21,6 +21,11 @@ export class OrderService {
     return this.dishes;
   }
 
+  getOrderByID(id): Observable<Order[]> {
+    return this.http.get<Order[]>('http://localhost:3000/orders/' + id);
+
+  }
+
   addDishToCart(item): void {
     this.dishes.push(item);
   }
@@ -41,6 +46,11 @@ export class OrderService {
 
   getAllOrders(): Observable<Order[]> {
     return this.http.get<Order[]>('http://localhost:3000/orders');
+  }
+
+  changeOrderStatus(order) {
+
+    this.http.put<Order[]>('http://localhost:3000/orders/' + order.id, order).subscribe();
   }
 
 }

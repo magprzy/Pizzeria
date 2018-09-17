@@ -37,6 +37,7 @@ export class OrderSummaryComponent implements OnInit {
   createOrder() {
     this.orderSummary.addressData = this.angularForm.value;
     this.orderSummary.dishesIDs = this.orderService.getDishesIds();
+    this.orderSummary.status = 'w realizacji';
   }
 
   onSubmit() {

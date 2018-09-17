@@ -1,0 +1,23 @@
+<div class="order">
+  <div *ngIf="order">
+    <h3>
+      <a> Numer zamówienia: {{order.id}}  </a>
+      <a> Zamówione dania: {{order.dishesIDs }}  </a>
+
+     <a> Dane kontaktowe: {{order.addressData.firstName}}
+      {{order.addressData.lastName}}
+      {{order.addressData.phoneNumber}}
+      {{order.addressData.email}}
+      {{order.addressData.street}}
+      {{order.addressData.city}}
+       {{order.addressData.floor}}      </a>
+
+
+
+      <span> Adres: {{order.addressData.city}}  </span>
+      <span> Status: {{order.status}}</span>
+    </h3>
+
+  </div>
+
+</div>

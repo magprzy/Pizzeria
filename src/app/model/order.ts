@@ -1,6 +1,7 @@
 export interface Order {
 
   id: number;
+  status: string;
   dishesIDs: number[];
   addressData: {
     firstName: string;

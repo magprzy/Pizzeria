@@ -38,5 +38,5 @@ describe('DishListComponent', () => {
     component.changeAvailability(dish);
     expect(component.dishes).toEqual([<Dish>{isAvailable: false}]);
   });
-  
+
 });

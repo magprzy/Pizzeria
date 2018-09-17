@@ -10,6 +10,7 @@ import {OrderListComponent} from './order-list/order-list.component';
 import {OrderConfirmationComponent} from './order-confirmation/order-confirmation.component';
 import {LoginGuard} from './login-guard';
 import {DishListComponent} from './dish-list/dish-list.component';
+import {OrderDetailsComponent} from './order-details/order-details.component';
 
 const routes: Routes = [
   {path: 'menu', component: MenuComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'order-list', component: OrderListComponent, canActivate: [LoginGuard]},
   {path: 'notification', component: OrderConfirmationComponent, outlet: 'popup'},
   {path: 'dish-list', component: DishListComponent, canActivate: [LoginGuard]},
+  {path: 'order-details/:id', component: OrderDetailsComponent},
 ];
 
 @NgModule({
